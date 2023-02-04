@@ -1,6 +1,8 @@
+import MsgList from "../components/MsgList";
+
 const Home = () => (
   <>
-    <>초기세팅</>
+    <MsgList />
   </>
 );
 
