@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 
-const MsgInput = ({ mutate, text }) => {
+const MsgInput = ({ mutate, text = "", id = undefined }) => {
   const textRef = useRef(null);
 
   const onSubmit = (e) => {
@@ -8,7 +8,7 @@ const MsgInput = ({ mutate, text }) => {
     e.stopPropagation();
     const text = textRef.current.value;
     textRef.current.value = "";
-    mutate(text);
+    mutate(text, id);
   };
 
   return (
